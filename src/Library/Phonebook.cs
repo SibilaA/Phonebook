@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using TwitterUCU;
+using WhatsAppApiUCU;
 
 namespace Library
 {
@@ -13,7 +15,10 @@ namespace Library
         }
 
         public Contact Owner { get; }
-
+        public void AñadirContacto (Contact contacto)
+        {
+            persons.Add(contacto);
+        }
         public List<Contact> Search(string[] names)
         {
             List<Contact> result = new List<Contact>();
@@ -28,7 +33,6 @@ namespace Library
                     }
                 }
             }
-
             return result;
         }
     }
